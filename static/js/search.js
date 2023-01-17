@@ -16,13 +16,16 @@ const filterEvents = async (search) => {
 
     const events = await filterEvents(search);
 
+    console.log(events);
+
     document.querySelector('.events').
         innerHTML = events.map((obj) => {
                 return `<h2>${obj.title}</h2>
                         <p>${obj.location}</p>
                         <p>${obj.day_of_week}</p>
                         <p>${obj.start}</p>
-                        <img src="https://www.pgm.gent/data/gentsefeesten/${obj.image}" alt="">`
+                        <img src="${obj.image ? obj.image.thumb : "./static/img/images/notfound.png"}" alt="">`
             }).join('');
+    
 })();
 

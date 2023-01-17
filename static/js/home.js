@@ -24,13 +24,18 @@ fetch(NEWS_HOME).then(Response => {
         return Response.json()
     }).then(data =>{
         console.log(data)
-        document.querySelector('.news-eight').
-            innerHTML = data.slice(0,8).map(function(titleNews){
-                return `
-                <h1>${titleNews.title}</h1>`
-        }).join('')
+        const eight = document.getElementById("eight");
+        const random = Math.floor(Math.random() * data.length);
+        const html = data
+        .slice(random, random +8)
+        .map((titleNews) => {
+            return `
+                <h1>${titleNews.title}</h1>
+                <img src="${titleNews.image ? titleNews.image.thumb : "./static/img/images/notfound.png"}" alt="">`
+        }).join('');
+    eight.innerHTML = html;
     });
-/*[Math.floor(Math.random() * data.length)]*/
+
 
 
 
