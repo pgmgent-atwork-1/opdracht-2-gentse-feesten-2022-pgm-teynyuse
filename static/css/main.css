@@ -186,7 +186,6 @@ header{
     .title-page{
     position: relative;
     top: 3.5rem;
-    max-width: 90vw;
     margin-right: 1.2rem;
     padding: 0.4rem;
     float: right;
@@ -603,7 +602,7 @@ svg[id^=arrow-animation] {
     }
     .title-page h1{
         padding-top: 1rem;
-        width: 62rem;
+        width: 62.9rem;
         height: 6rem;
         font-size: 5rem;
     }
@@ -660,9 +659,6 @@ svg[id^=arrow-animation] {
     .back-photo{
         right: -3rem;
     }
-    .troi-news h1{
-        color: white;
-    }
     .news-eight{
         color: white;
     }
@@ -687,6 +683,99 @@ svg[id^=arrow-animation] {
     .back-photo{
         display: none;
     }
-    .title-page h1
+    .news-title{
+        position: relative;
+        rotate: -90deg;
+        left: 20rem;
+        top: -4rem;
+    }
+    .news-inside{
+        position: relative;
+        top: 2.2rem;
+        right: 1.8rem;
+    }
+    .news-inside h1{
+        background-color: #000;
+        padding: 0.5rem;
+        color: white;
+        font-size: 9rem;
+        font-family: 'Stolzl-Display-Bold';
+        font-weight: 700;
+        width: 35rem;
+    }
+    .new-bg{
+        background-color: #e83c3c;
+        width: 36rem;
+        height: 9rem;
+    }
+    .news-section{
+        display: flex;
+        margin-top: 15rem;
+        margin-bottom: 20rem;
+    }
+    .news-grid ul{
+        display: block;
+        list-style: none;
+        color: #fff;
+    }
+    .for-grid ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .teaser{
+        height: 18rem;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-bottom: 10.4rem;
+        font-family: 'Stolzl-Bold';
+        border: 1px solid white;
+        font-size: 2rem;
+    }
+    .for-grid ul li{
+        cursor: pointer;
+    }
+    .for-grid ul li:hover{
+        color: #000;
+        background-color: #e83c3c;
+    }
+    .teaser:last-child{
+        grid-column-start: 1;
+        grid-column-end: 3 ;
+    }
+    .teaser p{
+        padding-right: 1rem;
+    }
+    .image{
+            width: 22%;
+            background: url(../img/news-image.jpg) center center no-repeat;
+            background-size: cover;
+    }
+    .button-all-news{
+        position: relative;
+        top: -17rem;
+        left: 38.9rem;
+        font-family: 'Stolz-Medium';
+        text-transform: uppercase;
+        text-align: center;
+        border: 1px solid white;
+        width: 25rem;
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    .button-all-news a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .button-all-news a:hover{
+        color: black;
+    }
+    .button-all-news:hover{
+        background-color: #fff;
+    }
+    .footer-bg{
+    display: flex;
+    justify-content:  right;
+    }
 }
+
 

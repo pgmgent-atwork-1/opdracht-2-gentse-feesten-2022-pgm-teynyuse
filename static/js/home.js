@@ -30,8 +30,7 @@ fetch(NEWS_HOME).then(Response => {
                 <h1>${titleNews.title}</h1>`
         }).join('')
     });
-
-    
+/*[Math.floor(Math.random() * data.length)]*/
 
 
 
@@ -42,10 +41,10 @@ const NEWS_TREE = 'https://www.pgm.gent/data/gentsefeesten/news.json';
         return Response.json()
     }).then(data => {
         console.log(data)
-        document.querySelector('.troi-news').
+        document.querySelector('.three-news').
             innerHTML = data.slice(0,3).map(function(titleNews){
                 return `
-                <h1>${titleNews.title}</h1>`
+                    <li class = "teaser"><p>${titleNews.title}</p></li>`
         }).join('')
     });
 
