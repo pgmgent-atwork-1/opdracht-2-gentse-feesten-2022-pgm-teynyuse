@@ -1,37 +1,31 @@
 (() =>{
 
-/*const NEWS_HOME = 'https://www.pgm.gent/data/gentsefeesten/events_500.json';
-fetch(NEWS_HOME).then(Response => {
-        return Response.json()
-    }).then(data =>{
-        data.slice(0,8).map(function(randomNews){
-            return randomNews[Math.floor(Math.random()*randomNews.length)];
-        })
-    });
-    randomNews()
-    function getNews() {
-        document.querySelector(".title-news").
-        innerHTML = data.map((obj) => {
-            return `<h1>${obj.title}</h1>`
-        })
-    }
-    getNews();
-    
-*/
-
 const NEWS_HOME = 'https://www.pgm.gent/data/gentsefeesten/events_500.json';
 fetch(NEWS_HOME).then(Response => {
         return Response.json()
     }).then(data =>{
         console.log(data)
-        const eight = document.getElementById("eight");
+        const eight = document.querySelector(".eight");
         const random = Math.floor(Math.random() * data.length);
         const html = data
         .slice(random, random +8)
-        .map((titleNews) => {
+        .map((events) => {
             return `
-                <h1>${titleNews.title}</h1>
-                <img src="${titleNews.image ? titleNews.image.thumb : "./static/img/images/notfound.png"}" alt="">`
+            <div class ="event-container">
+            <div class="image-date">
+            <p class= "date-event">${events.day_of_week} ${events.day}</p>
+            <img class="image-eight-events" src="${events.image ? events.image.thumb : "./static/img/images/notfound.png"}" alt="">
+            </div>
+            <div class = "jump_card"></div>
+                <div class="card-front">
+                    <h2 class="title-eight">${events.title}</h2>
+                    <div class ="place-hour">
+                    <h3 class = "place-eight">${events.location}</h3>
+                    <h3 class = "hour-eight">${events.start} u.</h3>
+                    </div>
+            </div>
+            </div>
+                `
         }).join('');
     eight.innerHTML = html;
     });

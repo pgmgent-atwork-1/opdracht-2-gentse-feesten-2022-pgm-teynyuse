@@ -6,10 +6,11 @@ const app = {
     },
     cacheElements() {
     this.$list = document.getElementById("list");
+    this.$category = document.getElementById("category");
     },
     async fetchCategories() {
     let response = await fetch(
-        "https://www.pgm.gent/data/gentsefeesten/categories.json"
+        "https://www.pgm.gent/data/gentsefeesten/categories.json",
     );
     return await response.json();
     },
@@ -45,6 +46,7 @@ const app = {
                 .map((event) => {
                   return `
                     <li>${event.title}</li>
+                    <li><img src="${event.image ? event.image.thumb : "./static/img/images/notfound.png"}" alt=""></li>
                   `;
                 })
                 .join("")}
@@ -55,7 +57,21 @@ const app = {
 
       this.$list.innerHTML = html;
     },
+
+    generateHTMLForCategories(categories, events) {
+      const html = categories
+        .map((category) => {
+          return `
+            <h2>${category.category}</h2>
+          `;
+        })
+        .join("");
+
+      this.$category.innerHTML = html;
+    },
   };
+
+
 
   app.initialize();
 })();
