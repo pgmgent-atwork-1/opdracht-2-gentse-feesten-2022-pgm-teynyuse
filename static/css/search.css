@@ -39,33 +39,47 @@
         max-width: 1440px;
         margin: 0 auto;
         padding: 0 16px;
-        margin-top: 25rem;
+        margin-top: 20rem;
         margin-bottom: 25rem;
     }
     input{
         color: white;
-        border: 0rem;
-        background-color: rgb(176, 149, 149);
-        height: 3rem;
-        width: 40rem;
+        background-color: transparent;
+        width: 60rem;
+        height: 4rem;
+        border: 1px solid white;
+        border-right: none;
+        font-size: 2rem;
+        font-family: 'Stolzl-Regular';
     }
     form{
-        width: 50rem;
+        display: flex;
+        justify-content: center;
         max-width: 100%;
-        margin: 0 auto;
-        padding: 0 1rem;
+    }
+    .search_icon img{
+        width: 5rem;
+    }
+    button{
+        padding-right: 2rem;
+        padding-left: 2rem;
         border: 1px solid white;
+        border-left: none;
     }
-    .search_button img{
-        width: 1rem;
+    svg{
+        width: 2rem;
     }
+    button:hover{
+        background-color:#e83c3c ;
+    }
+
+}
+
+@media only screen and (min-width: 65rem) {
     .events h2{
         color: white;
     }
     .events p{
         color: white;
-    }
-    .events{
-        display: flex;
     }
 }

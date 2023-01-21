@@ -6,7 +6,7 @@ fetch(NEWS_HOME).then(Response => {
     }).then(data =>{
         console.log(data)
         const eight = document.querySelector(".eight");
-        const random = Math.floor(Math.random() * data.length);
+        const random = Math.floor(Math.random() * (data.length-8));
         const html = data
         .slice(random, random +8)
         .map((events) => {
