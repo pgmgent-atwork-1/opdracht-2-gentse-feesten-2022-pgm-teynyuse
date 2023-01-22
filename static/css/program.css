@@ -44,6 +44,48 @@
         margin-bottom: 15rem;
     }
 
+    input{
+        color: white;
+        background-color: transparent;
+        width: 60rem;
+        height: 4rem;
+        border: 1px solid white;
+        border-right: none;
+        font-size: 1.2rem;
+        font-family: 'Stolzl-Regular';
+        padding: 1rem;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        max-width: 30%;
+        margin-top: 0rem;
+        margin-left: 35rem;
+        margin-bottom: 10rem;
+    }
+        .search_icon img {
+            width: 5rem;
+        }
+    
+        button {
+            padding-right: 2rem;
+            padding-left: 2rem;
+            border: 1px solid white;
+            border-left: none;
+        }
+    
+        svg {
+            width: 2rem;
+        }
+    
+        button:hover {
+            background-color: #e83c3c;
+        }
+    
+        input::placeholder {
+            color: #ffffff;
+        }
+
     #category-title{
         color: white;
     }
@@ -348,7 +390,7 @@
         height: 14rem;
     }
     .filter-container{
-        display: flex;
+        display: block;
         align-items: center;
     }
     .titles-filter{
@@ -367,5 +409,29 @@
         border: 1px solid white;
     }
 
+    h4{
+        display: flex;
+        border: 0px;
+    }
+    h4 img{
+        width: 1rem;
+        margin-right:2rem ;
+    }
+    .cate{
+        color: #000;
+        background-color: white;
+    }
+
+    #category-title {
+        list-style: none;
+        font-family: 'Stolzl-Regular';
+    }
+    #category-title li a {
+        text-decoration: none;
+        color: white;
+    }
+    .filter-above{
+        display: flex;
+    }
 }
 

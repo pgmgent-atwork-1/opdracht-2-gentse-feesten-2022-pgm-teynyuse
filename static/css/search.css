@@ -213,6 +213,7 @@
     .items--list .card-front-search{
         display: flex;
         align-items: center;
+        width: auto;
     }
     .items--list .place-hour-search{
         margin: 0 auto;
