@@ -1,6 +1,6 @@
 (() =>{
 
-const NEWS_HOME = 'https://www.pgm.gent/data/gentsefeesten/events_500.json';
+const NEWS_HOME = 'https://www.pgm.gent/data/gentsefeesten/events.json';
 fetch(NEWS_HOME).then(Response => {
         return Response.json()
     }).then(data =>{

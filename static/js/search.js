@@ -1,7 +1,7 @@
 (async()=>{
 
 const filterEvents = async (search) => {
-    const data = await fetch("https://www.pgm.gent/data/gentsefeesten/events_500.json", { method: 'GET', });
+    const data = await fetch("https://www.pgm.gent/data/gentsefeesten/events.json", { method: 'GET', });
     const events = await data.json();
     const filteredEvents = events.filter((event) =>
         event.category.findIndex(e => e.toLowerCase().includes(search)) !== -1 ||

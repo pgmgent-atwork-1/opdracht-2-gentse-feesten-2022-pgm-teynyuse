@@ -6,7 +6,7 @@ const app = {
     },
     cacheElements() {
     this.$list = document.getElementById("list");
-    this.$category = document.getElementById("category");
+    this.$title = document.getElementById("category-title");
     },
     async fetchCategories() {
     let response = await fetch(
@@ -16,7 +16,7 @@ const app = {
     },
     async fetchEvents() {
     let response = await fetch(
-        "https://www.pgm.gent/data/gentsefeesten/events_500.json"
+        "https://www.pgm.gent/data/gentsefeesten/events.json"
       );
       return await response.json();
     },
@@ -27,11 +27,16 @@ const app = {
 
         this.generateHTMLForEvents(categories, events);
       } catch (error) {
-        // todo
+      }
+        try {
+        const categories = await this.fetchCategories();
+
+        this.generateHTMLForCate(categories);
+      } catch (error) {
       }
     },
     generateHTMLForEvents(categories, events) {
-      const day = "20";
+      const day = "15";
 
       const html = categories
         .map((category) => {
@@ -40,13 +45,29 @@ const app = {
           });
 
           return `
+          <div class="arrow-title">
             <h2 id="${category}">${category}</h2>
+            <a href="#category-title"><svg id="arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.81 32"><path d="M17.81,9.9L8.93,0,0,9.9l2.22,2.01L7.41,6.15v25.85h3V6.14l5.17,5.76,2.23-2Z"/></svg></a>
+            </div>
             <ul>
               ${filteredEvents
-                .map((event) => {
+                .map((obj) => {
                   return `
-                    <li>${event.title}</li>
-                    <li><img src="${event.image ? event.image.thumb : "./static/img/images/notfound.png"}" alt=""></li>
+                <li class ="search-container">
+            <div class="image-search">
+            <p class= "date-search">${obj.day_of_week} ${obj.day}</p>
+            <p class= "date-hour">${obj.day_of_week} ${obj.day} &nbsp;${obj.start}u.</p>
+            <img class="image-search-none" src="${obj.image ? obj.image.thumb : "./static/img/images/notfound.png"}" alt="">
+            </div>
+            <div class = "jump_card"></div>
+                <div class="card-front-search">
+                    <h3 class="title-result">${obj.title}</h3>
+                    <div class ="place-hour-search">
+                    <h3 class = "place-search">${obj.location}</h3>
+                    <h3 class = "hour-search">${obj.start} u.</h3>
+                    </div>  
+            </div>
+            </li>
                   `;
                 })
                 .join("")}
@@ -54,24 +75,18 @@ const app = {
           `;
         })
         .join("");
-
       this.$list.innerHTML = html;
     },
 
-    generateHTMLForCategories(categories, events) {
-      const html = categories
+    generateHTMLForCate(categories){
+            const html = categories
         .map((category) => {
-          return `
-            <h2>${category.category}</h2>
-          `;
+            return `
+            <li><a href="#${category}">${category}</a></li>`
         })
         .join("");
-
-      this.$category.innerHTML = html;
+      this.$title.innerHTML = html;
     },
   };
-
-
-
   app.initialize();
 })();
