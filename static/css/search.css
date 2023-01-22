@@ -49,8 +49,9 @@
         height: 4rem;
         border: 1px solid white;
         border-right: none;
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: 'Stolzl-Regular';
+        padding: 1rem;
     }
     form{
         display: flex;
@@ -72,14 +73,229 @@
     button:hover{
         background-color:#e83c3c ;
     }
+    input::placeholder{
+        color: #ffffff;
+    }
 
 }
 
 @media only screen and (min-width: 65rem) {
-    .events h2{
+    .search-results{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .search-results h2{
         color: white;
     }
-    .events p{
+    .search-results p{
         color: white;
     }
+
+    .place-hour-search{
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+    .card-front-search{
+        position: relative;
+        border: 1px solid white;
+        background-color: #000;
+        padding: 2rem;
+        margin-top: -2.5rem;
+        margin-right: 3.5rem;
+        box-shadow: 0rem 0rem 0rem 0rem #e83c3c;
+    }
+    .title-result{
+        font-family: 'Stolzl-Bold';
+        font-size: 1.6rem;
+        font-weight: 700;
+
+    }
+    .place-search, 
+    .hour-search {
+        font-family: 'Stolzl-Regular';
+        font-weight: 400;
+    }
+    .jump_card{
+        position: fixed;
+    }
+    .card-front-search{
+        position: relative;
+        top: 0rem;
+        left: 0rem;
+        transition: 0.3s;
+    }
+    .search-container .card-front-search:hover{
+        top: -1.4rem;
+        left: 1.4rem;
+        box-shadow: -0.8rem 0.8rem 0rem 0.2rem #e83c3c;
+    }
+    .image-search{
+        width: 30rem;
+        height: auto;
+    }
+
+    .hour-list{
+        display: none;
+    }
+
+    .image-search img{
+        width: 100%;
+        height:80%;
+        border: 1px solid white;
+        object-fit: cover;
+    }
+    .place-search{
+        padding: 0.5rem;
+        margin-right: 1rem;
+    }
+    .date-hour{
+        display: none;
+    }
+    .date-search{
+        position: relative;
+        text-align: center;
+        top: 4.5rem;
+        left: 1.5rem;
+        font-family: 'Stolzl-Regular';
+        font-weight: 400;
+        text-transform: uppercase;
+        background-color: #000;
+        padding: 1rem;
+        width: 10rem;
+    }
+    .arrow-events{
+        width: 8rem;
+    }
+    .buttons-scroll{
+        display: flex;
+        justify-content: right;
+        margin-right: 2rem;
+        margin-top: 20rem;
+    }
+
+    .items--list {
+    gap: 0;
+    display: flex;
+    margin-top: 5rem;
+    }
+    .items--list .search-container .card-front-search{
+        position: static;
+        box-shadow: none;
+        margin-top: 0rem;
+        margin-right: 0rem;
+        border: none;
+        padding: 0rem;
+        transition: 0s;
+    }
+    .items--list .date-search{
+        position: static;
+        text-align: left;
+    }
+    .items--list .search-container {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0rem;
+
+    }
+
+    .items--list .card-front-search{
+        display: flex;
+        align-items: center;
+    }
+    .items--list .place-hour-search{
+        margin: 0 auto;
+        color: white;
+        padding: 0rem;
+    }
+    .items--list .place-search {
+    color: white;
+    background-color: none;
+    }
+    .items--list .search-container h2, p {
+    flex-grow: 1;
+    }
+    .items--list .search-container img {
+    display: none;
+    padding: 0rem;
+    }
+    .items--list .search-container + .search-container  {
+    border-top: none;
+    }
+    .items--list .hour-list{
+        display:block;
+        color: white;
+        text-align: left;
+        font-family: 'Stolzl-Regular';
+        font-weight: 400;
+        padding: 2rem;
+
+    }
+    .items--list .image-search{
+        display: flex;
+        align-items: center;
+        width: auto;
+        padding: 0rem;
+        border-right: 1px solid white;
+    }
+    .items--list .hour-search{
+        display: none;
+    }
+    .items--list .date-search{
+        display: none;
+    }
+    .items--list .date-hour{
+        display: flex;
+        font-family: 'Stolzl-Regular';
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: end;
+        text-transform: uppercase;
+        background-color:none;
+        padding: 2rem;
+        width: 20rem;
+    }
+
+        .items--list .title-result{
+        border-right: 1px solid white;
+        padding: 2rem;
+        width: 40rem;
+    }
+    .btn-toggle svg{
+        fill: rgb(255, 255, 255);
+        background-color: #000000;
+        width: 3.5rem;
+        padding: 1rem;
+        border:none;
+        cursor: pointer;
+    }
+    .btn-toggle-list svg{
+        fill: rgb(255, 255, 255);
+        background-color: #000000;
+        width: 4.1rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .btn-toggle svg:hover{
+        fill: black;
+        background-color: #e83c3c;
+        width: 3.5rem;
+        padding: 1rem;
+    }
+    .btn-toggle-list svg:hover{
+        fill: black;
+        background-color: #e83c3c;
+        width: 4.1rem;
+        padding: 1rem;
+    }
+    .buttons-toggle{
+        display: flex;
+        justify-content: right;
+        padding-right: 6rem;
+    }
+
 }

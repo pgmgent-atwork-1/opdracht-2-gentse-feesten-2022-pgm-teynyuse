@@ -462,7 +462,7 @@ svg[id^=arrow-animation] {
         }
     
         .footer-bg {
-            margin-top: 10rem;
+            margin-top: -20rem;
         }
     
         .partners-logo {
@@ -539,6 +539,10 @@ svg[id^=arrow-animation] {
     .nav-bar-desktop{
         display: flex;
         align-items: center;
+    }
+
+    .arrow-near-prgm img{
+        rotate: -90deg;
     }
 
     .nav-buttons ul{
@@ -675,7 +679,24 @@ svg[id^=arrow-animation] {
         width: 25%;
     }
     .button-ins{
+        text-transform: capitalize;
         margin-left: 1rem;
+        background-color: #e83c3c;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .button-ins:hover{
+        background-color: #fff;
+    }
+    .button-ins h4{
+        padding: 1rem 2rem 1rem 2rem;
+        font-family: 'Stolzl-Medium';
+
+    }
+    .button-ins h4 a{
+        color: #000;
+        text-transform: uppercase;
+        text-decoration: none;
     }
     .footer-main-text h3{
         font-size: 3.5rem;
