@@ -1,36 +1,42 @@
 @font-face {
-    font-family:'Stolzl-Bold';
-    src: url('../fonts/Bold.woff2') format('woff2'),
-        url('../fonts/Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Stolzl";
+  src: url("../fonts/Stolzl/Stolzl-Regular.woff2") format("woff2"),
+    url("../fonts/Stolzl/Stolzl-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 @font-face {
-    font-family:'Stolzl-Medium';
-    src: url('../fonts/Medium.woff2') format('woff2'),
-        url('../fonts/Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Stolzl";
+  src: url("../fonts/Stolzl/Stolzl-Medium.woff2") format("woff2"),
+    url("../fonts/Stolzl/Stolzl-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 @font-face {
-    font-family:'Stolzl-Regular';
-    src: url('../fonts/Stolzl-Regular.woff2') format('woff2'),
-        url('../fonts/Stolzl-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Stolzl";
+  src: url("../fonts/Stolzl/Stolzl-Bold.woff2") format("woff2"),
+    url("../fonts/Stolzl/Stolzl-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 @font-face {
-    font-family:'Stolzl-Display-Bold';
-    src: url('../fonts/Stolzl-Display-Bold.woff2') format('woff2'),
-        url('../fonts/Stolzl-Display-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Stolzl Display";
+  src: url("../fonts/Stolzl-display/Stolzl Display Bold.woff2") format("woff2"),
+    url("../fonts/Stolzl-display/Stolzl Display Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
 }
 
-
+body {
+  font-family: "Stolzl";
+}
 
 /*Mobile*/
 
@@ -40,9 +46,11 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-color: black;
+    font-family: "Stolzl";
+    color: white;
 }
 
-header{
+header, main{
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 16px;
@@ -153,7 +161,6 @@ header{
         text-decoration: none;
         color: black;
         font-size: 18px;
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
         line-height: 1.1rem;
     }
@@ -169,7 +176,6 @@ header{
         text-decoration: none;
         color: black;
         font-size: 18px;
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
         line-height: 1.1rem;
         margin-left: 2rem;
@@ -196,7 +202,6 @@ header{
 }
 
 .title-page h1{
-    font-family: 'Stolzl-Display-Bold' ,sans-serif;
     font-weight: 700;
     font-size: 2.6rem;
 }
@@ -231,7 +236,6 @@ header{
 }
 
 .link-balk-text{
-    font-family: 'Stolzl-Regular',sans-serif;
     font-weight: 400;
     font-size: 16px;
 }
@@ -244,12 +248,8 @@ header{
     text-decoration: none;
 }
 
-.programma-datum{
-    position: relative;
-    margin-top: 75rem;
-}
 
-.programma-datum ul.links-programma{
+.links-programma{
     display: flex;
     list-style: none;
     margin: 0;
@@ -257,7 +257,7 @@ header{
     flex-wrap: wrap;
 }
 
-.programma-datum ul.links-programma li{
+.links-programma li{
     border-right: solid 1px black;
     border-bottom: solid 1px black;
     flex: 1 1 20%;
@@ -274,14 +274,18 @@ header{
     background-color: #e83c3c;
 }
 
-.dag-in:hover{
+span:hover .dag{
     cursor: pointer;
-    background-color: #000;
+    color: white;
+}
+
+span:hover{
+    cursor: pointer;
+    background-color: black;
 }
 
 .dag-kort{
     font-size: 1.5rem;
-    font-family: "Stolzl Display", sans-serif;
     font-weight: 700;
     line-height: 1.4;
     text-transform: capitalize;
@@ -289,7 +293,6 @@ header{
 }
 
 .dag-lang{
-    font-family: 'Stolzl-Regular', sans-serif;
     font-weight: 400;
     font-size: .8rem;
     color: black;
@@ -298,7 +301,6 @@ header{
 .programma-datum{
     position: relative;
     margin-bottom: 5rem;
-    z-index: -1;
 }
 .to-footer a{
     text-decoration: none;
@@ -306,7 +308,6 @@ header{
     margin-bottom: 0;
     font-size: 1.6rem;
     color: black;
-    font-family: "Stolzl Display", sans-serif;
     font-weight: 700;
 }
 .to-footer h2{
@@ -350,11 +351,9 @@ svg[id^=arrow-animation] {
             font-size: 1.25rem;
             line-height: 1.5rem;
             color: #fff;
-            font-family: "Stolzl Display", sans-serif;
         }
     
         .footer-main-text p {
-            font-family: 'Stolzl-Regular', sans-serif;
             font-size: 1rem;
             line-height: 1.3rem;
             margin-bottom: 2rem;
@@ -371,7 +370,6 @@ svg[id^=arrow-animation] {
             font-size: .9rem;
             appearance: none;
             background-color: #ffffff;
-            font-family: 'Stolzl-Regular', sans-serif;
             font-weight: 400;
         }
     
@@ -395,7 +393,6 @@ svg[id^=arrow-animation] {
         .but-ins a {
             color: black;
             text-decoration: none;
-            font-family: 'Stolzl-Bold', sans-serif;
             text-transform: uppercase;
             font-size: 1.2rem;
         }
@@ -405,7 +402,6 @@ svg[id^=arrow-animation] {
             color: rgba(255, 255, 255, .7);
             font-size: 1rem;
             line-height: 1.2rem;
-            font-family: 'Stolzl-Bold', sans-serif;
         }
     
         .bottom-text strong {
@@ -439,7 +435,6 @@ svg[id^=arrow-animation] {
         }
     
         .slogan {
-            font-family: 'Stolzl-Regular', sans-serif;
             margin-top: 5rem;
         }
     
@@ -455,7 +450,6 @@ svg[id^=arrow-animation] {
     
         .hash {
             margin-top: 8rem;
-            font-family: 'Stolzl-Display-Bold';
             font-weight: 700;
             font-size: 2.1rem;
             margin-bottom: 2rem;
@@ -480,7 +474,6 @@ svg[id^=arrow-animation] {
     
         .black-footer {
             padding: 0 16px;
-            font-family: 'Stolzl-Regular', sans-serif;
             color: rgba(255, 255, 255, .7);
             padding-bottom: 2rem;
         }
@@ -570,14 +563,12 @@ svg[id^=arrow-animation] {
         text-decoration: none;
 
         color: #000;
-        font-family: 'Stolzl-Medium';
         font-weight: 500;
         font-size: 1.1rem;
     }
     .nav-buttons a{
         text-decoration: none;
         color: white;
-        font-family: 'Stolzl-Medium';
         font-weight: 500;
         font-size: 1.1rem;
         margin-left: 1rem;
@@ -644,7 +635,6 @@ svg[id^=arrow-animation] {
         z-index: 1;
     }
     .programma-datum{
-        display: block;
         position: relative;
         right: 0rem;
         margin-top: 20rem;
@@ -690,7 +680,6 @@ svg[id^=arrow-animation] {
     }
     .button-ins h4{
         padding: 1rem 2rem 1rem 2rem;
-        font-family: 'Stolzl-Medium';
 
     }
     .button-ins h4 a{
@@ -726,7 +715,6 @@ svg[id^=arrow-animation] {
         padding: 0.5rem;
         color: white;
         font-size: 9rem;
-        font-family: 'Stolzl-Display-Bold';
         font-weight: 700;
         width: 35rem;
     }
@@ -760,7 +748,6 @@ svg[id^=arrow-animation] {
         padding-top: 0.5rem;
         padding-left: 0.5rem;
         padding-bottom: 10.4rem;
-        font-family: 'Stolzl-Bold';
         border: 1px solid white;
         font-size: 2rem;
     }
@@ -788,7 +775,6 @@ svg[id^=arrow-animation] {
         position: relative;
         top: -17rem;
         left: 19.9rem;
-        font-family: 'Stolzl-Medium';
         text-transform: uppercase;
         text-align: center;
         border: 1px solid white;
@@ -842,14 +828,12 @@ svg[id^=arrow-animation] {
         box-shadow: 0rem 0rem 0rem 0rem #e83c3c;
     }
     .title-eight{
-        font-family: 'Stolzl-Bold';
         font-size: 1.6rem;
         font-weight: 700;
 
     }
     .place-eight, 
     .hour-eight {
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
     }
     .jump_card{
@@ -888,7 +872,6 @@ svg[id^=arrow-animation] {
         text-align: center;
         top: 4.5rem;
         left: 1.5rem;
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
         text-transform: uppercase;
         background-color: #000;
@@ -919,5 +902,266 @@ svg[id^=arrow-animation] {
     }
 
 }
+
+.events {
+  display: flex;
+  overflow-x: scroll;
+  gap: 1.25rem;
+  margin-top: 8.75rem;
+}
+
+.div-event {
+  width: 15.62rem;
+}
+
+@media (min-width: 48rem) {
+  .events {
+    margin-top: 0rem;
+  }
+
+  .div-event {
+    width: 31.25rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .events {
+    margin-left: 9.37rem;
+    margin-top: 6.25rem;
+  }
+}
+
+::-webkit-scrollbar {
+  height: .31rem;
+  width: .62rem;
+  border-radius: .312rem;
+}
+
+.event-card {
+  position: relative;
+  margin-bottom: 5.68rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.event-date {
+  position: relative;
+  text-transform: uppercase;
+  border: .06rem solid hsl(0, 0%, 100%);
+}
+
+.event-date p {
+  position: absolute;
+  background-color: hsl(0, 0%, 0%);
+  margin: .62rem;
+  padding: .31rem .62rem;
+}
+
+.event-img {
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.event-img img {
+  width: 100%;
+}
+
+.event-info {
+  position: absolute;
+  bottom: -5.62rem;
+  background-color: hsl(0, 0%, 0%);
+  border: .06rem solid hsl(0, 0%, 100%);
+  padding: 1.25rem;
+  width: 90%;
+  transition: 0.2s ease-in;
+}
+
+@media (min-width: 48rem) {
+  .event-info {
+    bottom: -3.43rem;
+    width: 90%;
+  }
+}
+
+a :hover .event-info {
+  box-shadow: -1rem 1rem 0rem 0rem hsl(0, 79%, 57%);
+  margin: 0rem 0rem 1.56rem 1.56rem;
+}
+
+.event-title {
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.event-location {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event-location span{
+  background-color: hsl(0, 79%, 57%);
+  color: hsl(0, 0%, 0%);
+  padding: .31rem .62rem;
+  margin-right: .62rem;
+}
+
+/* news */ 
+
+.section-news {
+  margin-top: 4.37rem;
+  margin-bottom: 10rem;
+}
+
+@media (min-width: 48rem) {
+  .section-news {
+    display: flex;
+  }
+}
+
+.div-rotated-title {
+  background-color: hsl(0, 79%, 57%);
+  padding: 2rem 1.37rem 1.37rem 0rem;
+  height: 6.25rem;
+  width: 16.25rem;
+  margin-top: 3.12rem;
+}
+
+.rotated-title h2 {
+  background-color: hsl(0, 0%, 0%);
+  font-size: 3.75rem;
+}
+
+@media (min-width: 48rem) {
+  .rotated-title h2 {
+    font-size: 6.25rem;
+  }
+
+  .div-rotated-title {
+    margin-top: 9rem;
+    margin-left: -9.37rem;
+    rotate: 270deg;
+    width: 24.81rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  
+
+  .rotated-title h2{
+    font-size: 7.5rem;
+  }
+
+  .div-rotated-title {
+    margin-top: 11.87rem;
+    margin-left: -9.37rem;
+    width: 29.5rem;
+  }
+}
+
+.article-news {
+  width: 100%;
+  margin-top: 3.12rem;
+  margin-bottom: 4.37rem;
+}
+
+@media (min-width: 48rem) {
+  .article-news {
+    margin-top: 0rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .article-news {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 48rem) {
+  .news-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 15.62rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .news-index {
+    width: 60%;
+  }
+}
+
+.news-title-index {
+  padding: 1.25rem .93rem 2.18rem .93rem;
+  font-size: 1.12rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: .0625rem solid hsl(0, 0%, 100%);
+  transition: 0.2s ease-in;
+}
+
+.news-title-index:hover {
+  background-color: hsl(0, 79%, 57%);
+}
+
+.news-title-index:hover .arrow-right {
+  display: none;
+}
+
+.news-title-index p {
+  margin-bottom: 3.12rem;
+  transition: 0.2s ease-in;
+}
+
+.news-title-index:hover p {
+  color: hsl(0, 0%, 0%);
+}
+
+@media (min-width: 48rem) {
+  .news-title-index:last-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .news-title-index p {
+    font-size: 1.5rem;
+  }
+
+  .twitterfeed img {
+    aspect-ratio: 2/1;
+    height: 15.62rem;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 80rem) {
+  .twitterfeed {
+    width: 40%;
+  }
+
+  .twitterfeed img {
+    height: 100%;
+  }
+}
+
+.btn-all-news {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  font-size: 1.12rem;
+  border: .06rem solid hsl(0, 0%, 100%);
+  padding: 1.25rem;
+  transition: 0.2s ease-in;
+}
+
+.btn-all-news:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
+
+
 
 
