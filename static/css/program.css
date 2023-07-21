@@ -403,3 +403,125 @@
     }
 }
 
+/*Program*/
+@media (min-width: 48rem) {
+    .calender-day {
+        display: flex;
+        position: relative;
+        left: -36.6rem;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: .06rem;
+    }
+    
+    .calender-day li {
+        aspect-ratio: 1/1;
+        padding: 1.87rem;
+        text-align: center;
+        height: auto;
+    }
+
+    .calender-day .day p:first-child {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    
+    .calender-day .day a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .calender-day .day-red {
+        background-color: hsl(0, 79%, 57%);
+    }
+
+    .calender-day li:nth-child(4), .calender-day li:nth-child(5) {
+        background-color: hsl(0, 0%, 0%);
+    }
+
+    .calender-day .day-black a {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .calender-day .day-red a {
+        color: hsl(0, 0%, 0%);
+    }
+
+    .calender-white {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .calender-day li:nth-child(4) {
+        border-bottom: .062rem solid hsl(0, 0%, 100%);
+        border-right: .062rem solid hsl(0, 0%, 100%);;
+    }
+
+    .calender-day li:last-child{
+        border-top: .062rem solid hsl(0, 0%, 100%);
+        border-left: .062rem solid hsl(0, 0%, 100%);
+    }
+
+    .calender-day li:hover {
+        background-color: black;
+    }
+    
+    .calender-day li:hover a{
+        color: hsl(0, 0%, 100%);
+    }
+    
+    .calender-day .day-black:hover {
+        background-color: hsl(0, 79%, 57%);
+    }
+    
+    .calender-day .day-black:hover a {
+        color: hsl(0, 0%, 0%);
+    }
+}
+
+@media (min-width: 80rem) {
+    .calender-day {
+        flex-wrap: nowrap;
+    }
+    
+    .calender-day li {
+        aspect-ratio: 1/1;
+        padding: 1.87rem;
+        text-align: center;
+        height: auto;
+        width: 19.6%;
+    }
+    
+    .calender-day .day a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .calender-day .day-black {
+        background-color: hsl(0, 0%, 0%);
+    }
+    
+    .calender-day .day-black a {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .calender-day .day p:first-child {
+        font-size: 1.56rem;
+    }
+    
+    .calender-day li:nth-child(4), .calender-day li:nth-child(5) {
+        background-color: hsl(0, 79%, 57%);
+    }
+    
+    .calender-day li:nth-child(4), .calender-day li:nth-child(7) {
+        border: none;
+    }
+
+    .calender-day li:last-child {
+        border-top: none;
+    }
+
+    .calender-day .day-black {
+        border-left: .06rem solid hsl(0, 0%, 100%);
+    }
+}
+

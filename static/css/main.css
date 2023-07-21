@@ -302,6 +302,18 @@ span:hover{
     position: relative;
     margin-bottom: 5rem;
 }
+
+/*footer*/
+.first-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.slogan{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .to-footer a{
     text-decoration: none;
     margin-right: 1rem;
@@ -424,9 +436,13 @@ svg[id^=arrow-animation] {
         }
     
         .red-footer {
-            padding: 0 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 25rem;
             background: #e83c3c;
             color: #000;
+            height: 35rem;
         }
     
         .logo-footer {
@@ -436,12 +452,21 @@ svg[id^=arrow-animation] {
     
         .slogan {
             margin-top: 5rem;
+            margin-bottom: 5rem;
         }
     
-        .slogan h2 {
-            border-bottom: .1563rem solid black;
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
+
+        .line-footer{
+            width: 54rem;
+            height: 0.1rem;
+            margin: 0 1rem 0 1rem ;
+            background-color: black;
+        }
+
+        .end-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     
         .date {
@@ -449,10 +474,8 @@ svg[id^=arrow-animation] {
         }
     
         .hash {
-            margin-top: 8rem;
             font-weight: 700;
-            font-size: 2.1rem;
-            margin-bottom: 2rem;
+            font-size: 3.75rem;
         }
     
         .footer-bg {
@@ -468,20 +491,26 @@ svg[id^=arrow-animation] {
         .partners-logo img {
             width: auto;
             height: 2.8rem;
-            margin-right: 4.5rem;
-            margin-bottom: 3.5rem;
         }
     
         .black-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 0 16px;
             color: rgba(255, 255, 255, .7);
             padding-bottom: 2rem;
         }
+
+        .black-footer p{
+            width: 65rem;
+        }
     
     
-        .links-black .privacy .cookie {
+        .cookie {
             cursor: pointer;
             text-decoration: none;
+            margin-right: 1rem;
         }
     
         .links-black .privacy:hover {
@@ -1161,6 +1190,7 @@ a :hover .event-info {
   background-color: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 0%);
 }
+
 
 
 
