@@ -1,4 +1,4 @@
-const events_URL = 'https://www.pgm.gent/data/gentsefeesten/events.json';
+const events_URL = 'https://www.pgm.gent/data/gentsefeesten/events_500.json';
 const news_URL = 'https://www.pgm.gent/data/gentsefeesten/news.json';
 
 (() => {

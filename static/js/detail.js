@@ -2,30 +2,13 @@
     const app = {
         init() {
             this.cacheElements();
-            this.openAsideDay();
-            this.closeAsideDay();
             this.fetchEvents();
         },
 
         cacheElements() {
             this.$btnDay = document.querySelector("#btn-day");
-            this.$asideDay = document.querySelector("#aside-day");
-            this.$crossDay = document.getElementById("cross-day");
             this.$detail = document.querySelector("#detail");
         },
-
-        openAsideDay() {
-            this.$btnDay.addEventListener("click", (e) => {
-                this.$asideDay.classList.add("open");
-            });
-        },
-
-        closeAsideDay() {
-            this.$crossDay.addEventListener("click", (e) => {
-                this.$asideDay.classList.remove("open");
-            });
-        },
-
 
         fetchEvents() {
             fetch(events_URL)

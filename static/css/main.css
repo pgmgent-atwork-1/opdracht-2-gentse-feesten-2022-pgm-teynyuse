@@ -214,7 +214,6 @@ header, main{
     width: 12.8rem;
     height: 30%;
     background-color:#e83c3c;
-    z-index: -1;
 }
 .link-balk{
     display: flex;
@@ -1007,7 +1006,16 @@ svg[id^=arrow-animation] {
 @media (min-width: 48rem) {
   .event-info {
     bottom: -3.43rem;
-    width: 90%;
+    width: auto;
+  }
+  .items-category{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .category{
+    font-size: 2rem;
+    text-align: center;
   }
 }
 

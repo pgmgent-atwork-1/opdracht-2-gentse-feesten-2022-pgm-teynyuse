@@ -1,15 +1,15 @@
-@media only screen and (min-width: 65rem) {
+@media only screen and (min-width: 100px) {
     body{
         background-image: none;
         background-color: black;
     }
-    main{
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 16px;
-    }
     header{
-        margin-bottom: 15rem;
+    margin: 0 auto;
+    padding: 0 16px;
+    }
+
+    html{
+        overflow-x:hidden
     }
 
     input{
@@ -20,15 +20,14 @@
         border: 1px solid white;
         border-right: none;
         font-size: 1.2rem;
-        font-family: 'Stolzl-Regular';
         padding: 1rem;
     }
     form{
         display: flex;
         justify-content: center;
         max-width: 30%;
-        margin-top: 0rem;
-        margin-left: 35rem;
+        margin-top: -10rem;
+        margin-left: 33.9rem;
         margin-bottom: 10rem;
     }
         .search_icon img {
@@ -61,7 +60,6 @@
     #list h2{
         display: flex;
         justify-content: center;
-        font-family: 'Stolzl-Display-Bold';
         font-weight: 700;
         color: white;
         font-size: 3.2rem;
@@ -163,7 +161,6 @@
         text-align: center;
         top: 4.5rem;
         left: 1.5rem;
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
         text-transform: uppercase;
         background-color: #000;
@@ -271,7 +268,6 @@
 
     .items--list .date-hour {
         display: flex;
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
         font-size: 1.2rem;
         text-align: end;
@@ -279,6 +275,25 @@
         background-color: none;
         padding: 2rem;
         width: 20rem;
+    }
+
+    .category-filter{
+    list-style: none;
+    padding: 2.5rem;
+    column-gap: 2rem;
+    column-count: 2;
+    }
+    .category-filter a{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .category_name{
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 0.5rem;
     }
 
     .items--list .title-result {
@@ -344,12 +359,11 @@
     .filter-title h1{
         position: relative;
         color: white;
-        font-family: 'Stolzl-Display-Bold';
         font-size: 9.3rem;
         background-color: #000;
         width: 28rem;
         top: 3rem;
-        left: 6rem;
+        left: 4.5rem;
     }
     .filter-title{
         position: relative;
@@ -359,10 +373,9 @@
     }
     .filter-container{
         display: block;
-        align-items: center;
+        margin-top: 30rem;
     }
     .titles-filter{
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
         font-size: 1.5rem;
         color: white;
@@ -374,6 +387,8 @@
         padding: 0.5rem 1rem;
     }
     .filter-box{
+        position: relative;
+        top: -10rem;
         border: 1px solid white;
     }
 
@@ -392,7 +407,6 @@
 
     #category-title {
         list-style: none;
-        font-family: 'Stolzl-Regular';
     }
     #category-title li a {
         text-decoration: none;
@@ -405,45 +419,56 @@
 
 /*Program*/
 @media (min-width: 48rem) {
-    .calender-day {
+    .day-red-nav p{
+        font-size: 1.5rem;
+    }
+    .calender-day-nav {
         display: flex;
         position: relative;
-        left: -36.6rem;
+        left: -54.3rem;
         flex-wrap: wrap;
         list-style: none;
-        gap: .06rem;
+        gap: .07rem;
+        width: 200rem;
+    }
+
+    .kort-nav{
+        font-weight: 500;
     }
     
-    .calender-day li {
+    .calender-day-nav li {
+        cursor: pointer;
         aspect-ratio: 1/1;
-        padding: 1.87rem;
+        padding: 2rem;
         text-align: center;
         height: auto;
     }
 
-    .calender-day .day p:first-child {
+    .calender-day-nav .day p:first-child {
         font-size: 1.25rem;
         font-weight: 500;
     }
     
-    .calender-day .day a {
+    .calender-day-nav .day a {
         text-decoration: none;
         font-weight: 500;
     }
 
-    .calender-day .day-red {
+    .calender-day-nav .day-red-nav {
+        width: 8.5rem;
+        height: 8.5rem;
         background-color: hsl(0, 79%, 57%);
     }
 
-    .calender-day li:nth-child(4), .calender-day li:nth-child(5) {
+    .calender-day-nav li {
         background-color: hsl(0, 0%, 0%);
     }
 
-    .calender-day .day-black a {
+    .calender-day-nav .day-black a {
         color: hsl(0, 0%, 100%);
     }
 
-    .calender-day .day-red a {
+    .calender-day-nav .day-red-nav a {
         color: hsl(0, 0%, 0%);
     }
 
@@ -451,76 +476,65 @@
         color: hsl(0, 0%, 100%);
     }
 
-    .calender-day li:nth-child(4) {
-        border-bottom: .062rem solid hsl(0, 0%, 100%);
-        border-right: .062rem solid hsl(0, 0%, 100%);;
-    }
 
-    .calender-day li:last-child{
-        border-top: .062rem solid hsl(0, 0%, 100%);
-        border-left: .062rem solid hsl(0, 0%, 100%);
-    }
-
-    .calender-day li:hover {
+    .calender-day-nav li:hover {
         background-color: black;
     }
     
-    .calender-day li:hover a{
+    .calender-day-nav li:hover a{
         color: hsl(0, 0%, 100%);
     }
     
-    .calender-day .day-black:hover {
+    .calender-day-nav .day-black:hover {
         background-color: hsl(0, 79%, 57%);
     }
     
-    .calender-day .day-black:hover a {
+    .calender-day-nav .day-black:hover a {
         color: hsl(0, 0%, 0%);
     }
 }
 
 @media (min-width: 80rem) {
-    .calender-day {
+    .calender-day-nav {
         flex-wrap: nowrap;
     }
     
-    .calender-day li {
+    .calender-day-nav li {
         aspect-ratio: 1/1;
-        padding: 1.87rem;
         text-align: center;
         height: auto;
-        width: 19.6%;
     }
     
-    .calender-day .day a {
+    .calender-day-nav .day a {
         text-decoration: none;
         font-weight: 500;
     }
     
-    .calender-day .day-black {
+    .calender-day-nav .day-black {
         background-color: hsl(0, 0%, 0%);
     }
     
-    .calender-day .day-black a {
+    .calender-day-nav .day-black a {
         color: hsl(0, 0%, 100%);
     }
 
-    .calender-day .day p:first-child {
+    .calender-day-nav .day p:first-child {
         font-size: 1.56rem;
     }
     
-    .calender-day li:nth-child(4), .calender-day li:nth-child(5) {
+    .calender-day-nav li {
         background-color: hsl(0, 79%, 57%);
     }
     
-    .calender-day li:nth-child(4), .calender-day li:nth-child(7) {
+    .calender-day-nav li {
         border: none;
     }
 
-    .calender-day li:last-child {
+    .calender-day-nav li:last-child {
         border-top: none;
     }
 
-    .calender-day .day-black {
+    .calender-day-nav.day-black {
         border-left: .06rem solid hsl(0, 0%, 100%);
     }
 }

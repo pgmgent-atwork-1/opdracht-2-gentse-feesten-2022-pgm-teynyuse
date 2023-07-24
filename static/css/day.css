@@ -1,0 +1,560 @@
+footer {
+    margin-top: 25rem;
+}
+
+.index {
+    background-color: hsl(0, 0%, 0%);
+}
+
+.index svg {
+    fill: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 48rem) {
+    .index {
+        background-color: hsl(0, 79%, 57%);
+    }
+
+    .index svg {
+        fill: hsl(0, 0%, 0%);;
+    }
+}
+
+.title-background-red {
+    height: 6.87rem;
+}
+
+@media (min-width: 48rem) {
+    .title-background-red {
+        height: 20.87rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .title-background-red {
+        height: 11.87rem;
+    }
+}
+
+.change-day {
+    display: flex;
+    align-items: center;
+    gap: .93rem;
+    margin-top: 10.37rem;
+    margin-right: -12.62rem;
+    width: 9.37rem;
+    float: right;
+    text-decoration: underline;
+}
+
+.change-day svg {
+    fill: hsl(0, 0%, 100%);
+    width: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+    .change-day {
+        display: none;
+    }
+
+    .titel-day {
+        display: none;
+    }
+
+    .title {
+        width: 42.5rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .title {
+        width: 74.37rem;
+    }    
+}
+
+.calender-day {
+    display: none;
+}
+
+@media (min-width: 48rem) {
+    .calender-day {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: .06rem;
+    }
+    
+    .calender-day li {
+        aspect-ratio: 1/1;
+        padding: 1.87rem;
+        text-align: center;
+        height: auto;
+        width: 19.6%;
+    }
+
+    .calender-day .day p:first-child {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    
+    .calender-day .day a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .calender-day .day-red {
+        background-color: hsl(0, 79%, 57%);
+    }
+
+    .calender-day li:nth-child(4), .calender-day li:nth-child(5) {
+        background-color: hsl(0, 0%, 0%);
+    }
+
+    .calender-day .day-black a {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .calender-day .day-red a {
+        color: hsl(0, 0%, 0%);
+    }
+
+    .calender-white {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .calender-day li:nth-child(4) {
+        border-bottom: .062rem solid hsl(0, 0%, 100%);
+        border-right: .062rem solid hsl(0, 0%, 100%);;
+    }
+
+    .calender-day li:last-child{
+        border-top: .062rem solid hsl(0, 0%, 100%);
+        border-left: .062rem solid hsl(0, 0%, 100%);
+    }
+
+    .calender-day li:hover {
+        background-color: black;
+    }
+    
+    .calender-day li:hover a{
+        color: hsl(0, 0%, 100%);
+    }
+    
+    .calender-day .day-black:hover {
+        background-color: hsl(0, 79%, 57%);
+    }
+    
+    .calender-day .day-black:hover a {
+        color: hsl(0, 0%, 0%);
+    }
+}
+
+@media (min-width: 80rem) {
+    .calender-day {
+        flex-wrap: nowrap;
+    }
+    
+    .calender-day li {
+        aspect-ratio: 1/1;
+        padding: 1.87rem;
+        text-align: center;
+        height: auto;
+        width: 19.6%;
+    }
+    
+    .calender-day .day a {
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .calender-day .day-black {
+        background-color: hsl(0, 0%, 0%);
+    }
+    
+    .calender-day .day-black a {
+        color: hsl(0, 0%, 100%);
+    }
+
+    .calender-day .day p:first-child {
+        font-size: 1.56rem;
+    }
+    
+    .calender-day li:nth-child(4), .calender-day li:nth-child(5) {
+        background-color: hsl(0, 79%, 57%);
+    }
+    
+    .calender-day li:nth-child(4), .calender-day li:nth-child(7) {
+        border: none;
+    }
+
+    .calender-day li:last-child {
+        border-top: none;
+    }
+
+    .calender-day .day-black {
+        border-left: .06rem solid hsl(0, 0%, 100%);
+    }
+}
+
+.event-list .event-img, .event-list .event-date {
+    display: none;
+}
+
+.event-list .div-event {
+    width: 100%;
+    margin-top: 0rem;
+}
+
+.event-list a{
+    text-decoration: none;
+}
+
+.event-list ul{
+    margin-bottom: 7.5rem;
+}
+
+.event-list li{
+    margin-bottom: 0rem
+}
+
+.event-list .event-info{
+    width: 100%;
+    padding: .62rem;
+    display: flex;
+    gap: 3.12rem;
+    position: relative;
+    padding: 1rem;
+    transition: ease-out 1.4s;
+}
+
+.event-list .event-info:hover {
+    box-shadow: inset 0 -5rem 0 0 hsl(0, 0%, 100%);
+    margin: 0px;
+    color: hsl(0, 0%, 0%);
+}
+
+.event-list .event-info:hover .event-location span {
+    color: hsl(0, 0%, 0%);
+}
+
+.event-list .event-location span {
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    padding: 0rem;
+    transition: ease-out 1.4s;
+}
+
+.event {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.event h2 {
+    text-align: center;
+    font-size: 1.56rem;
+}
+
+@media (min-width: 48rem) {
+    .event h2 {
+        font-size: 2.18rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .event h2 {
+        font-size: 3.125rem;
+    }
+}
+
+.event ul {
+    list-style: none;
+}
+
+ul li .div-event {
+    margin-top: 9.37rem;
+    width: 100%;
+}
+
+@media (min-width: 48rem) {
+    ul li .div-event {
+        width: 25rem;
+    }
+
+    .raster-event ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 6.25rem;
+    }
+}
+
+.event-list li:nth-child(odd) {
+    margin-top: 0rem;
+}
+
+@media (min-width: 48rem) {
+    .event li:nth-child(odd) {
+        margin-top: 3.12rem;
+    }
+
+    .event-list li:nth-child(odd) {
+        margin-top: 0rem;
+    }
+}
+
+.section {
+    margin-top: 18.75rem;
+}
+
+.div-rotated-title {
+    display: none;
+}
+
+@media (min-width: 80rem) {
+    .section {
+        margin-top: 20rem;
+    }
+    
+    .div-rotated-title {
+        display: block;
+        width: 23.87rem;
+    }
+}
+
+.filter {
+    display: flex;
+}
+
+.event-filters {
+    width: 100%;
+}
+
+.filter > div {
+    border: .06rem solid hsl(0, 0%, 100%);
+    padding: 1.25rem 4%;
+}
+
+.filter svg {
+    fill: hsl(0, 0%, 100%);
+    width: 2.25rem;
+}
+
+.filter-category {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.filter-category svg {
+    fill: hsl(0, 0%, 0%);
+}
+
+.filter-wheelchair {
+    border-right: none;
+}
+
+.filter-free {
+    width: 100%;
+}
+
+.filter-items ul {
+    list-style: none;
+    border: .06rem solid hsl(0, 0%, 100%);
+    border-bottom: none;
+    padding: 1.25rem;
+}
+
+@media (min-width: 80rem) {
+    .filter-items ul {
+        column-count: 2;
+    }
+}
+
+.filter-items li {
+    padding: 1.25rem 0rem;
+}
+
+.filter-items a {
+    display: flex;
+    gap: .62rem;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+.filter-items svg {
+    fill: hsl(0, 0%, 100%);
+    aspect-ratio: 1/1;
+    width: 1.8rem;
+}
+
+.filter-items p {
+    font-size: 1.25rem;
+}
+
+@media (min-width: 80rem) {
+    .article-filter {
+        display: flex;
+    }
+}
+
+.cross-day {
+    position: absolute;
+    top: 3.12rem;
+    right: .6rem;
+}
+
+.ul-days a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+}
+
+.ul-days a:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+.form-search {
+    display: flex;
+    justify-content: space-between;
+    border: .06rem solid hsl(0, 0%, 100%);
+    max-width: 40.6rem;
+}
+
+.form-search input {
+    background: transparent;
+    border: none;
+    width: 80%;
+    height: 3.12rem;
+    color: hsl(0, 0%, 100%);
+    padding: 0rem .62rem;
+}
+
+.form-search input:focus {
+    outline: hsl(0, 100%, 50%);
+}
+
+.form-search button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.form-search button:hover {
+    background-color: hsl(0, 79%, 57%);
+}
+
+.form-search svg{
+    fill: hsl(0, 0%, 100%);
+}
+
+.form-search:hover svg{
+    fill: hsl(0, 0%, 0%);
+}
+
+.search-decoration {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.search-decoration svg {
+    fill: hsl(0, 0%, 0%);
+    width: 1.56rem;
+}
+
+.search-decoration img {
+    width: 100%;
+}
+
+@media (min-width: 48rem) {
+    .search-decoration {
+        display: flex;
+    }
+
+    .search-decoration img {
+        width: 30%;
+    }
+}
+
+.search-decoration div {
+    background-color: hsl(0, 79%, 57%);
+    color: hsl(0, 0%, 0%);
+    padding: 1.56rem;
+    width: 100%;
+}
+
+.search-decoration div p{
+    margin: 1.25rem 0rem;
+}
+
+@media (min-width: 48rem) {
+    .search-decoration div {
+        padding: 3.75rem;
+        width: 70%;
+    }
+
+    .search-decoration div p{
+        font-size: 1.12rem;
+    }
+}
+
+.search-decoration button:hover {
+    background-color: hsl(0, 0%, 0%);
+}
+
+.search-decoration:hover svg{
+    fill: hsl(0, 0%, 100%);
+}
+
+.search-decoration input {
+    color:hsl(0, 0%, 0%);
+}
+
+.search-decoration input::placeholder {
+    color: hsl(0, 0%, 0%);
+    text-align: left;
+}
+
+@media (min-width: 48rem) {
+    .search-decoration h2 {
+        font-size: 2.18rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .search-decoration h2 {
+        font-size: 3.12rem;
+    }
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.category svg {
+    fill: hsl(0, 0%, 100%);
+    width: 1.87rem;
+}
+
+.toggle {
+    border: .06rem solid hsl(0, 0%, 100%);
+    border-top: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    padding: .93rem;
+}
+
+.toggle-button svg {
+    fill: hsl(0, 0%, 100%);
+}
+
+.active {
+    background-color: hsl(0, 79%, 57%);
+}
+
+.active svg {
+    fill: hsl(0, 0%, 0%);
+}
