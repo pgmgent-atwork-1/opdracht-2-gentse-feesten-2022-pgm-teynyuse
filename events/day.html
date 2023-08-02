@@ -63,7 +63,7 @@
         </div>
         <div class="burger-menu">
             <div class="logo-button">
-                <img src="./static/img/gentse-feesten-icoontjes/logo-black.svg" alt="">
+                <img src="../static/img/gentse-feesten-icoontjes/logo-black.svg" alt="">
                 <div class="burger-button-close">
                     <div class="line-c1"></div>
                     <div class="line-c2"></div>
@@ -74,19 +74,19 @@
                     <li><a href="#">NIEUWS</a></li>
                     <div class="mobile-menu">
                         <li class="arrow-near-prgm"><a href="#">PROGRAMMA</a><img
-                                src="./static/img/gentse-feesten-icoontjes/arrow-down.svg" alt="" srcset=""></li>
+                                src="../static/img/gentse-feesten-icoontjes/arrow-down.svg" alt="" srcset=""></li>
                         <div class="programma-list">
                             <ul>
-                                <li>Vrijdag 15 juli</li>
-                                <li>Zaterdag 16 juli</li>
-                                <li>Zondag 17 juli</li>
-                                <li>Maandag 18 juli</li>
-                                <li>Dinsdag 19 juli</li>
-                                <li>Woensdag 20 juli</li>
-                                <li>Donderdag 21 juli</li>
-                                <li>Vrijdag 22 juli</li>
-                                <li>Zaterdag 23 juli</li>
-                                <li>Zondag 24 juli</li>
+                                <a href="day.html?day=15"><li>Vrijdag 15 juli</li></a>
+                                <a href="day.html?day=16"><li>Vrijdag 16 juli</li></a>
+                                <a href="day.html?day=17"><li>Vrijdag 17 juli</li></a>
+                                <a href="day.html?day=18"><li>Vrijdag 18 juli</li></a>
+                                <a href="day.html?day=19"><li>Vrijdag 19 juli</li></a>
+                                <a href="day.html?day=20"><li>Vrijdag 20 juli</li></a>
+                                <a href="day.html?day=21"><li>Vrijdag 21 juli</li></a>
+                                <a href="day.html?day=22"><li>Vrijdag 22 juli</li></a>
+                                <a href="day.html?day=23"><li>Vrijdag 23 juli</li></a>
+                                <a href="day.html?day=24"><li>Vrijdag 24 juli</li></a>
                                 <li><a href="#">Programma</a></li>
                             </ul>
                         </div>
@@ -192,7 +192,7 @@
             </div>
         <div class="filter-box">
             <div class="titles-filter">
-                <h4><img src="../static/img/gentse-feesten-icoontjes/marker.svg" alt="">Feestpleinen</h4>
+                <a href="./location.html"><h4><img src="../static/img/gentse-feesten-icoontjes/marker.svg" alt="">Feestpleinen</h4></a>
                 <h4 class="cate"><img src="../static/img/gentse-feesten-icoontjes/category.svg" alt="">Categorie</h4>
                 <h4><img src="../static/img/gentse-feesten-icoontjes/clock.svg" alt="">Tijd</h4>
                 <h4><img src="../static/img/gentse-feesten-icoontjes/balloon.svg" alt="">Kinderen</h4>
@@ -201,6 +201,7 @@
             </div>
                 <div>
                     <ul class="category-filter" id="filter-items"></ul>
+                    <ul class="location-filter" id="filter-locations"></ul>
                 </div>
             </div>
         </div>
@@ -301,5 +302,6 @@
     </footer>
     <script src="../static/js/main.js"></script>
     <script src="../static/js/day.js"></script>
+    <script src="../static/js/burger-menu.js"></script>
 </body>
 </html>

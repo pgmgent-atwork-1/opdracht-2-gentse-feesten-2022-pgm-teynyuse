@@ -37,6 +37,73 @@
 body {
   font-family: "Stolzl";
 }
+ /*arrow*/
+.arrow{
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.left-arrow{
+    transform: rotate(180deg);
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.title-content:hover .arrow-body{
+    width: 5rem;
+    transition: 0.4s ease-in-out;
+}
+
+.arrow-body{
+    display: flex;
+    width: 3rem;
+    height: 0.21rem;
+    background-color: black;
+}
+
+.white{
+    display: flex;
+    width: 3rem;
+    height: 0.21rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.arrow-point{
+    position: relative;
+    left: -1.4rem;
+}
+
+.point1{
+    transform: rotate(30deg);
+    width: 1.5rem;
+    height: 0.20rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 0.4rem;
+}
+.point2{
+    transform: rotate(-30deg);
+    width: 1.5rem;
+    height: 0.20rem;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0.5rem;
+}
+
+.arrow-point1{
+    transform: rotate(30deg);
+    width: 1.5rem;
+    height: 0.20rem;
+    background-color: black;
+    margin-bottom: 0.4rem;
+}
+.arrow-point2{
+    transform: rotate(-30deg);
+    width: 1.5rem;
+    height: 0.20rem;
+    background-color: black;
+    margin-top: 0.5rem;
+}
 
 /*Mobile*/
 
@@ -639,6 +706,8 @@ svg[id^=arrow-animation] {
         align-items: flex-start;
     }
 
+
+
     .burger-menu.open{
         width: 50%;
     }
@@ -686,9 +755,6 @@ svg[id^=arrow-animation] {
     .back-photo{
         right: -3rem;
     }
-    .news-eight{
-        color: white;
-    }
     .email-field{
         display: flex;
         align-items: flex-end;
@@ -723,237 +789,45 @@ svg[id^=arrow-animation] {
     .footer-main-text p{
         font-size: 1.3rem;
     }
-    .back-photo{
-        display: none;
-    }
-    .news-title{
-        position: relative;
-        top: 15rem;
-        rotate: -90deg;
-        width: 2rem;
-        margin-left: 15rem;
-    }
-    .news-inside{
-        position: relative;
-        top: 2.2rem;
-        right: 1.8rem;
-    }
-    .news-inside h1{
-        background-color: #000;
-        padding: 0.5rem;
-        color: white;
-        font-size: 9rem;
-        font-weight: 700;
-        width: 35rem;
-    }
-    .new-bg{
-        background-color: #e83c3c;
-        width: 36rem;
-        height: 9rem;
-    }
-    .news-section{
-        display: flex;
-        margin-bottom: 20rem;
-    }
-    .news-grid{
-        right: 20rem;
-    }
-    .news-grid ul{
-        display: block;
-        list-style: none;
-        color: #fff;
-    }
-    .for-grid ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-    }
-    .news-container{
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-    .teaser{
-        height: 18rem;
-        padding-top: 0.5rem;
-        padding-left: 0.5rem;
-        padding-bottom: 10.4rem;
-        border: 1px solid white;
-        font-size: 2rem;
-    }
-    .for-grid ul li{
-        cursor: pointer;
-    }
-    .for-grid ul li:hover{
-        color: #000;
-        background-color: #e83c3c;
-    }
-    .teaser:last-child{
-        grid-column-start: 1;
-        grid-column-end: 3 ;
-    }
-    .teaser p{
-        padding-right: 1rem;
-    }
-    .image{
-        width: 50%;
-        left: -20rem;
-        background: url(../img/news-image.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    .button-all-news{
-        position: relative;
-        top: -17rem;
-        left: 19.9rem;
-        text-transform: uppercase;
-        text-align: center;
-        border: 1px solid white;
-        width: 25rem;
-        font-size: 1.2rem;
-        padding: 1rem;
-    }
-    .button-all-news a{
-        text-decoration: none;
-        color: #fff;
-    }
-    .button-all-news a:hover{
-        color: black;
-    }
-    .button-all-news:hover{
-        background-color: #fff;
-    }
+
     .footer-bg{
     display: flex;
     justify-content:  right;
     }
-    .eight{
-        display: flex;
-        gap: 2rem;
-        color: white;
-    }
-    .container-eight-events{
-        margin: 0 auto;
-        overflow: auto;
-        background: transparent;
-        width: 100rem;
-    }
-
-    ::-webkit-scrollbar {
-    display: none;
-    }
-
-    .place-hour{
-        display: flex;
-        align-items: center;
-        margin-top: 2rem;
-        font-size: 1rem;
-    }
-    .card-front{
-        position: relative;
-        border: 1px solid white;
-        background-color: #000;
-        padding: 2rem;
-        margin-top: -2.5rem;
-        margin-right: 3.5rem;
-        box-shadow: 0rem 0rem 0rem 0rem #e83c3c;
-    }
-    .title-eight{
-        font-size: 1.6rem;
-        font-weight: 700;
-
-    }
-    .place-eight, 
-    .hour-eight {
-        font-weight: 400;
-    }
-    .jump_card{
-        position: fixed;
-    }
-    .card-front{
-        position: relative;
-        top: 0rem;
-        left: 0rem;
-        transition: 0.3s;
-    }
-    .event-container .card-front:hover{
-        top: -1.4rem;
-        left: 1.4rem;
-        box-shadow: -0.8rem 0.8rem 0rem 0.2rem #e83c3c;
-    }
-    .image-date{
-        width: 30rem;
-        height: auto;
-    }
-
-    .image-date img{
-        width: 100%;
-        height:80%;
-        border: 1px solid white;
-        object-fit: cover;
-    }
-    .place-eight{
-        color: #000;
-        background-color: #e83c3c;
-        padding: 0.5rem;
-        margin-right: 1rem;
-    }
-    .date-event{
-        position: relative;
-        text-align: center;
-        top: 4.5rem;
-        left: 1.5rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        background-color: #000;
-        padding: 1rem;
-        width: 10rem;
-    }
-    .arrow-events{
-        width: 8rem;
-    }
-    .buttons-scroll{
-        display: flex;
-        justify-content: right;
-        margin-right: 2rem;
-        margin-top: 20rem;
-    }
-    #arrow-go{
-        transform: rotate(-180deg);
-    }
-    .first-eight{
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-    .eight{
-        margin-bottom: 15rem;
-    }
-    button{
-        background-color: transparent;
-    }
 
 }
-
-.events {
+/*Eight - Events*/
+.eight-events {
   display: flex;
   overflow-x: scroll;
   gap: 1.25rem;
   margin-top: 8.75rem;
 }
 
-.div-event {
+#home-events a:nth-child(odd) {
+    margin-top: 2.5rem;
+}
+
+#event li:nth-child(odd) {
+    margin-top: 2.5rem;
+}
+
+.event-box {
   width: 15.62rem;
 }
 
 @media (min-width: 48rem) {
-  .events {
+  .eight-events {
     margin-top: 0rem;
   }
 
-  .div-event {
+  .event-box {
     width: 31.25rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .events {
+  .eight-events {
     margin-left: 9.37rem;
     margin-top: 6.25rem;
   }
@@ -1000,7 +874,7 @@ svg[id^=arrow-animation] {
   border: .06rem solid hsl(0, 0%, 100%);
   padding: 1.25rem;
   width: 90%;
-  transition: 0.2s ease-in;
+  transition: 0.1s ease-in;
 }
 
 @media (min-width: 48rem) {
@@ -1031,6 +905,7 @@ a :hover .event-info {
 
 .event-location {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -1114,7 +989,7 @@ a :hover .event-info {
 }
 
 @media (min-width: 48rem) {
-  .news-index {
+  .news-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 15.62rem;
@@ -1122,12 +997,12 @@ a :hover .event-info {
 }
 
 @media (min-width: 80rem) {
-  .news-index {
+  .news-grid {
     width: 60%;
   }
 }
 
-.news-title-index {
+.news-title-grid {
   padding: 1.25rem .93rem 2.18rem .93rem;
   font-size: 1.12rem;
   font-weight: 500;
@@ -1139,30 +1014,30 @@ a :hover .event-info {
   transition: 0.2s ease-in;
 }
 
-.news-title-index:hover {
+.news-title-grid:hover {
   background-color: hsl(0, 79%, 57%);
 }
 
-.news-title-index:hover .arrow-right {
+.news-title-grid:hover .arrow-right {
   display: none;
 }
 
-.news-title-index p {
+.news-title-grid p {
   margin-bottom: 3.12rem;
   transition: 0.2s ease-in;
 }
 
-.news-title-index:hover p {
+.news-title-grid:hover p {
   color: hsl(0, 0%, 0%);
 }
 
 @media (min-width: 48rem) {
-  .news-title-index:last-child {
+  .news-title-grid:last-child {
     grid-column-start: 1;
     grid-column-end: 3;
   }
   
-  .news-title-index p {
+  .news-title-grid p {
     font-size: 1.5rem;
   }
 

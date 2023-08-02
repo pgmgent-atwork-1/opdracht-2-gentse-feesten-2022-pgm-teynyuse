@@ -16,6 +16,7 @@ const categories_URL = "https://www.pgm.gent/data/gentsefeesten/categories.json"
             this.$event = document.querySelector("#event");
             this.$detail = document.querySelector("#detail");
             this.$filterCategory = document.querySelector("#filter-items");
+            this.$filterLocations = document.querySelector("#filter-locations");
             this.$toggleList = document.querySelector("#toggle-list");
             this.$toggleRaster = document.querySelector("#toggle-raster");
         },
@@ -60,10 +61,11 @@ const categories_URL = "https://www.pgm.gent/data/gentsefeesten/categories.json"
                 const locations = await this.fetchLocation();
 
                 if (this.$event) {
-                this.$event.innerHTML = this.renderHTMLForCategory(categories,events);
+                this.$event.innerHTML = this.renderHTMLForCategory(categories,events,locations);
                 }
 
                 this.$filterCategory.innerHTML = this.renderHTMLForFilterCategory(categories);
+                this.$filterLocations.innerHTML = this.renderHTMLForFilterLocation(locations);
             } catch (error) {
                 console.log(error);
             }
@@ -90,6 +92,22 @@ const categories_URL = "https://www.pgm.gent/data/gentsefeesten/categories.json"
                     </li>`;
             }).join("\n");
         },
+        renderHTMLForFilterLocation(locations) {
+            const uniqueLocations = locations.filter((event, index, self) => {
+                return index === self.findIndex((e) => e.location === event.location);
+            });
+
+            return uniqueLocations
+                .map((event) => {
+                    return `
+                        <li class="location_name">
+                            <a href="#${event.location}">
+                                <p>${event.location}</p>
+                            </a>
+                        </li>`;
+                }).join("\n");
+        },
+
         renderHTMLForCategory(categories, events) {
             const params = new URLSearchParams(window.location.search);
             const day = params.get("day") ?? "15";
@@ -116,7 +134,57 @@ const categories_URL = "https://www.pgm.gent/data/gentsefeesten/categories.json"
                                 return `
                                     <li class="items-category">
                                         <a href="detail.html?slug=${event.slug}&day=${event.day}" class="event-card">
-                                            <div class="event-box">
+                                            <div class="div-event">
+                                                <div class="event-date">
+                                                    <p>${event.day_of_week} ${event.day} JULI</p>
+                                                    <div class="event-img">
+                                                        ${this.pictureEvent(event)}
+                                                    </div>
+                                                </div>
+                                                <div class="event-info">
+                                                    <p class="event-title">${event.title}</p>
+                                                    <div class="event-location">
+                                                        <span>${event.location}</span>
+                                                        <p class="event-start">${event.start} u.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>`;
+                            }).join("")}
+                        </ul>
+                    </div>
+                    `;
+            })
+            .join("");
+        },
+        renderHTMLForLocations(locations, events) {
+            const params = new URLSearchParams(window.location.search);
+            const day = params.get("day") ?? "15";
+            return locations
+                .map((category) => {
+                let filteredEvents = events.filter((event) => {
+                    return event.day === day && event.category.includes(category);
+                });
+                console.log(filteredEvents);
+                return `
+                    <div>
+                        <div class="location">
+                            <h2 id="${location}">${location}</h2>
+                            <a href="#filter-items">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="32" viewBox="0 0 18 32">
+                                    <title>arrow-up</title>
+                                    <path d="M17.809 9.9l-8.88-9.9-8.929 9.897 2.225 2.007 5.189-5.752-0 25.848h2.997l0-25.863 5.169 5.763z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="items-category">
+                            ${filteredEvents
+                                .map((event) => {
+                                return `
+                                    <li class="items-category">
+                                        <a href="detail.html?slug=${event.slug}&day=${event.day}" class="event-card">
+                                            <div class="div-event">
                                                 <div class="event-date">
                                                     <p>${event.day_of_week} ${event.day} JULI</p>
                                                     <div class="event-img">
