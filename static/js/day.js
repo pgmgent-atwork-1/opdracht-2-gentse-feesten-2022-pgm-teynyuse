@@ -16,24 +16,24 @@ const categories_URL = "https://www.pgm.gent/data/gentsefeesten/categories.json"
             this.$event = document.querySelector("#event");
             this.$detail = document.querySelector("#detail");
             this.$filterCategory = document.querySelector("#filter-items");
-            this.$toggleList = document.querySelector("#toggle-list");
-            this.$toggleRaster = document.querySelector("#toggle-raster");
+            this.$toggleList = document.querySelector("#btn-list");
+            this.$toggleRaster = document.querySelector("#btn-grid");
         },
 
         toggleRaster() {
             this.$toggleRaster.addEventListener("click", (e) => {
-                this.$event.classList.remove("event-list");
-                this.$event.classList.add("raster-event");
+                this.$event.classList.remove("items--list");
+                this.$event.classList.add("active");
 
                 this.$toggleList.classList.remove("active");
-                this.$toggleRaster.classList.add("active");
+                this.$toggleRaster.classList.add("");
             })
         },
 
         toggleList() {
             this.$toggleList.addEventListener("click", (e) => {
-                this.$event.classList.remove("raster-event");
-                this.$event.classList.add("event-list");
+                this.$event.classList.remove("items--list");
+                this.$event.classList.add("items--list");
 
                 this.$toggleRaster.classList.remove("active");
                 this.$toggleList.classList.add("active");
@@ -104,37 +104,38 @@ const categories_URL = "https://www.pgm.gent/data/gentsefeesten/categories.json"
                         <div class="category">
                             <h2 id="${category}">${category}</h2>
                             <a href="#filter-items">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="32" viewBox="0 0 18 32">
-                                    <title>arrow-up</title>
-                                    <path d="M17.809 9.9l-8.88-9.9-8.929 9.897 2.225 2.007 5.189-5.752-0 25.848h2.997l0-25.863 5.169 5.763z"></path>
-                                </svg>
+                            <svg id="arrow-up" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                viewBox="0 0 17.81 32">
+                                <path d="M17.81,9.9L8.93,0,0,9.9l2.22,2.01L7.41,6.15v25.85h3V6.14l5.17,5.76,2.23-2Z"/>
+                            </svg>
                             </a>
                         </div>
-                        <ul class="items-category">
+                            <ul class="row-event">
                             ${filteredEvents
-                                .map((event) => {
+                                .map((obj) => {
                                 return `
-                                    <li class="items-category">
-                                        <a href="detail.html?slug=${event.slug}&day=${event.day}" class="event-card">
-                                            <div class="event-box">
-                                                <div class="event-date">
-                                                    <p>${event.day_of_week} ${event.day} JULI</p>
-                                                    <div class="event-img">
-                                                        ${this.pictureEvent(event)}
-                                                    </div>
-                                                </div>
-                                                <div class="event-info">
-                                                    <p class="event-title">${event.title}</p>
-                                                    <div class="event-location">
-                                                        <span>${event.location}</span>
-                                                        <p class="event-start">${event.start} u.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>`;
-                            }).join("")}
-                        </ul>
+                    <a href="/events/detail.html?slug=${obj.slug}&day=${obj.day}" class="event-card">
+                                <li class ="event-box list--type">
+                            <div class="image-search">
+                            <p class= "date-search">${obj.day_of_week} ${obj.day}</p>
+                            <p class= "date-hour">${obj.day_of_week} ${obj.day} &nbsp;${obj.start}u.</p>
+                            <img class="image-search-none" src="${obj.image ? obj.image.thumb : "../static/img/no-photo.jpg"}" alt="">
+                            </div>
+                            <div class = "jump_card"></div>
+                                <div class="card-front-search">
+                                    <h3 class="title-result">${obj.title}</h3>
+                                    <div class ="place-hour-search">
+                                    <h3 class = "place-search">${obj.location}</h3>
+                                    <h3 class = "hour-search">${obj.start} u.</h3>
+                                    </div>  
+                            </div>
+                            </li>
+                        </a>
+                                `;
+                                })
+                                .join("")}
+                            </ul>
                     </div>
                     `;
             })

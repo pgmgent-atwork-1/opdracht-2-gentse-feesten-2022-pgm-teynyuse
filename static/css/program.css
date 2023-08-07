@@ -22,7 +22,7 @@
         font-size: 1.2rem;
         padding: 1rem;
     }
-    form{
+    .form_filter{
         display: flex;
         justify-content: center;
         max-width: 30%;
@@ -31,8 +31,15 @@
         margin-bottom: 10rem;
     }
         .search_icon img {
-            width: 5rem;
+            width: auto;
         }
+
+        .search_button_search{
+        background-color: transparent;
+    }
+       .search_button_search svg{
+        width: 2rem;
+    }
     
         button {
             padding-right: 2rem;
@@ -86,6 +93,7 @@
         font-size: 1rem;
     }
 
+
     .card-front-search {
         position: relative;
         border: 1px solid white;
@@ -97,15 +105,13 @@
     }
 
     .title-result {
-        font-family: 'Stolzl-Bold';
-        font-size: 1.6rem;
         font-weight: 700;
+        font-size: 1.6rem;
 
     }
 
     .place-search,
     .hour-search {
-        font-family: 'Stolzl-Regular';
         font-weight: 400;
     }
 
@@ -124,11 +130,24 @@
         width: 27rem;
         transition: 0.3s;
     }
+    .row-event{
+    display: flex;
+    flex-wrap: wrap;
+    }
 
-    .search-container .card-front-search:hover {
+    .event-box:hover .card-front-search {
         top: -1.4rem;
         left: 1.4rem;
         box-shadow: -0.8rem 0.8rem 0rem 0.2rem #e83c3c;
+    }
+
+    .event ul {
+        list-style: none;
+    }
+
+    ul li .event-box {
+        margin-top: 9.37rem;
+        width: 100%;
     }
 
     .image-search {
@@ -145,6 +164,11 @@
         height: 80%;
         border: 1px solid white;
         object-fit: cover;
+    }
+
+    .row-event a{
+    text-decoration: none;
+    color: inherit;
     }
 
     .place-search {
@@ -179,104 +203,21 @@
         margin-top: 20rem;
     }
 
-    .items--list {
-        gap: 0;
-        display: flex;
-        margin-top: 5rem;
+    .event-box{
+        cursor: pointer;
     }
 
-    .items--list .search-container .card-front-search {
-        position: static;
-        box-shadow: none;
-        margin-top: 0rem;
-        margin-right: 0rem;
-        border: none;
-        padding: 0rem;
-        transition: 0s;
+    .category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0rem 2rem 0rem;
     }
 
-    .items--list .date-search {
-        position: static;
-        text-align: left;
+    .category svg {
+    fill: hsl(0, 0%, 100%);
+    width: 1.87rem;
     }
-
-    .items--list .search-container {
-        display: flex;
-        width: 100%;
-        gap: 2rem;
-        border: 1px solid rgb(255, 255, 255);
-        padding: 0rem;
-
-    }
-
-    .items--list .card-front-search {
-        display: flex;
-        align-items: center;
-    }
-
-    .items--list .place-hour-search {
-        margin: 0 auto;
-        color: white;
-        padding: 0rem;
-    }
-
-    .items--list .place-search {
-    color: white;
-    background-color: black ;
-    padding: 2rem;
-    }
-
-    .items--list .search-container h2,
-    p {
-        flex-grow: 1;
-    }
-
-    .items--list .search-container img {
-        display: none;
-        padding: 0rem;
-    }
-
-    .items--list .search-container+.search-container {
-        border-top: none;
-    }
-
-    .items--list .hour-list {
-        display: block;
-        color: white;
-        text-align: left;
-        font-family: 'Stolzl-Regular';
-        font-weight: 400;
-        padding: 2rem;
-
-    }
-
-    .items--list .image-search {
-        display: flex;
-        align-items: center;
-        width: auto;
-        padding: 0rem;
-        border-right: 1px solid white;
-    }
-
-    .items--list .hour-search {
-        display: none;
-    }
-
-    .items--list .date-search {
-        display: none;
-    }
-
-    .items--list .date-hour {
-        display: flex;
-        font-weight: 400;
-        font-size: 1.2rem;
-        text-align: end;
-        text-transform: uppercase;
-        background-color: none;
-        padding: 2rem;
-        width: 20rem;
-    }
-
     .category-filter{
     list-style: none;
     padding: 2.5rem;
@@ -291,12 +232,97 @@
         gap: 0.5rem;
     }
     .category_name{
-        margin-bottom: 2rem;
         display: flex;
         gap: 0.5rem;
+        margin-bottom: 1.5rem;
     }
 
-    .items--list .title-result {
+
+.items--list {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    }
+
+    .items--list .event-box .card-front-search{
+        position: static;
+        box-shadow: none;
+        margin-top: 0rem;
+        margin-right: 0rem;
+        border: none;
+        padding: 0rem;
+        transition: 0s;
+    }
+    .items--list .date-search{
+        position: static;
+        text-align: left;
+    }
+    .items--list .event-box {
+    display: flex;
+    width: 100rem;
+    gap: 2rem;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0rem;
+
+    }
+
+    .items--list .card-front-search{
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+    .items--list .place-hour-search{
+        margin: 0 auto;
+        color: white;
+        padding: 0rem;
+    }
+    .items--list .place-search {
+    color: white;
+    background-color: black ;
+    padding: 2rem;
+    }
+    .items--list .event-box h2, p {
+    flex-grow: 1;
+    }
+    .items--list .event-box img {
+    display: none;
+    padding: 0rem;
+    }
+    .items--list .hour-list{
+        display:block;
+        color: white;
+        text-align: left;
+        font-family: 'Stolzl-Regular';
+        font-weight: 400;
+        padding: 2rem;
+
+    }
+    .items--list .image-search{
+        display: flex;
+        align-items: center;
+        width: auto;
+        padding: 0rem;
+        border-right: 1px solid white;
+    }
+    .items--list .hour-search{
+        display: none;
+    }
+    .items--list .date-search{
+        display: none;
+    }
+    .items--list .date-hour{
+        display: flex;
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: end;
+        text-transform: uppercase;
+        background-color:none;
+        padding: 2rem;
+        width: 20rem;
+    }
+
+        .items--list .title-result{
         border-right: 1px solid white;
         padding: 2rem;
         width: 40rem;
@@ -336,7 +362,6 @@
     .buttons-toggle {
         display: flex;
         justify-content: right;
-        padding-right: 6rem;
     }
 
     .arrow-title{
@@ -536,6 +561,121 @@
 
     .calender-day-nav.day-black {
         border-left: .06rem solid hsl(0, 0%, 100%);
+    }
+}
+
+.form-search {
+    display: flex;
+    justify-content: space-between;
+    border: .06rem solid hsl(0, 0%, 100%);
+    max-width: 40.6rem;
+}
+
+.form-search input {
+    background: transparent;
+    border: none;
+    width: 80%;
+    height: 3.12rem;
+    color: hsl(0, 0%, 100%);
+    padding: 0rem .62rem;
+}
+
+.form-search input:focus {
+    outline: hsl(0, 100%, 50%);
+}
+
+.form-search button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.form-search button:hover {
+    background-color: hsl(0, 79%, 57%);
+}
+
+.form-search svg{
+    fill: hsl(0, 0%, 100%);
+}
+
+.form-search:hover svg{
+    fill: hsl(0, 0%, 0%);
+}
+
+.search-decoration {
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 8rem;
+}
+
+.search-decoration svg {
+    fill: hsl(0, 0%, 0%);
+    width: 1.56rem;
+}
+
+.search-decoration img {
+    width: 100%;
+}
+
+@media (min-width: 48rem) {
+    .search-decoration {
+        display: flex;
+    }
+
+    .search-decoration img {
+        width: 30%;
+    }
+}
+
+.search-group {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 79%, 57%);
+    color: hsl(0, 0%, 0%);
+    padding: 1.56rem;
+    width: 100%;
+}
+
+.search-decoration div p{
+    margin: 1.25rem 0rem;
+}
+
+@media (min-width: 48rem) {
+    .search-decoration div {
+        padding: 3.75rem;
+        width: 70%;
+    }
+
+    .search-decoration div p{
+        font-size: 1.12rem;
+    }
+}
+
+.search-decoration button:hover {
+    background-color: hsl(0, 0%, 0%);
+}
+
+.search-decoration:hover svg{
+    fill: hsl(0, 0%, 100%);
+}
+
+.search-decoration input {
+    color:hsl(0, 0%, 0%);
+}
+
+.search-decoration input::placeholder {
+    color: hsl(0, 0%, 0%);
+    text-align: left;
+}
+
+@media (min-width: 48rem) {
+    .search-decoration h2 {
+        font-size: 2.18rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .search-decoration h2 {
+        font-size: 3.12rem;
     }
 }
 

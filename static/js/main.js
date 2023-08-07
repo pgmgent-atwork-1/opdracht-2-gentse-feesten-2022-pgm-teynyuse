@@ -1,4 +1,4 @@
-const events_URL = 'https://www.pgm.gent/data/gentsefeesten/events_500.json';
+const events_URL = 'https://www.pgm.gent/data/gentsefeesten/events.json';
 const news_URL = 'https://www.pgm.gent/data/gentsefeesten/news.json';
 
 (() => {
@@ -40,24 +40,24 @@ const news_URL = 'https://www.pgm.gent/data/gentsefeesten/news.json';
 
         renderHTMLForEvents(events) {
             const random = Math.floor(Math.random()*(events.length-8));
-            return events.slice(random,random+8).map((event) => {
+            return events.slice(random,random+8).map((obj) => {
                 return `
-                    <a href="events/detail.html?slug=${event.slug}&day=${event.day}" class="event-card">
-                        <div class="event-box">
-                            <div class="event-date">
-                                <p>${event.day_of_week} ${event.day} JULI</p>
-                                <div class="event-img">
-                                    ${this.pictureEvent(event)}
-                                </div>
+                    <a href="/events/detail.html?slug=${obj.slug}&day=${obj.day}" class="event-card">
+                                <li class ="event-box list--type">
+                            <div class="image-search">
+                            <p class= "date-search">${obj.day_of_week} ${obj.day}</p>
+                            <p class= "date-hour">${obj.day_of_week} ${obj.day} &nbsp;${obj.start}u.</p>
+                            <img class="image-search-none" src="${obj.image ? obj.image.thumb : "../static/img/no-photo.jpg"}" alt="">
                             </div>
-                            <div class="event-info">
-                                <p class="event-title">${event.title}</p>
-                                <div class="event-location">
-                                    <span>${event.location}</span>
-                                    <p>${event.start} u.</p>
-                                </div>
+                            <div class = "jump_card"></div>
+                                <div class="card-front-search">
+                                    <h3 class="title-result">${obj.title}</h3>
+                                    <div class ="place-hour-search">
+                                    <h3 class = "place-search">${obj.location}</h3>
+                                    <h3 class = "hour-search">${obj.start} u.</h3>
+                                    </div>  
                             </div>
-                        </div>
+                            </li>
                     </a>`
             }).join('')
         },

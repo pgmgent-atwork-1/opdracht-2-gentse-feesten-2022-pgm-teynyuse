@@ -51,6 +51,14 @@ body {
     align-items: center;
 }
 
+#arrow-go{
+    transform: rotate(-180deg);
+}
+
+h1, h2 {
+  font-family: "Stolzl Display";
+}
+
 .title-content:hover .arrow-body{
     width: 5rem;
     transition: 0.4s ease-in-out;
@@ -368,6 +376,132 @@ span:hover{
     position: relative;
     margin-bottom: 5rem;
 }
+
+/**/
+
+    .row-event{
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .event-box:hover .card-front-search {
+        top: -1.4rem;
+        left: 1.4rem;
+        box-shadow: -0.8rem 0.8rem 0rem 0.2rem #e83c3c;
+    }
+
+    .event ul {
+        list-style: none;
+    }
+
+    ul li .event-box {
+        margin-top: 9.37rem;
+        width: 100%;
+    }
+
+    .image-search {
+        width: 30rem;
+        height: auto;
+    }
+
+    .hour-list {
+        display: none;
+    }
+
+    .image-search img {
+        width: 100%;
+        height: 80%;
+        border: 1px solid white;
+        object-fit: cover;
+    }
+
+    .place-search {
+        padding: 0.5rem;
+        margin-right: 1rem;
+    }
+
+    .place-hour-search{
+      display: flex;
+      align-items: center;
+    }
+
+    .date-hour {
+        display: none;
+    }
+
+    .date-search {
+        position: relative;
+        text-align: center;
+        top: 4.5rem;
+        left: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        background-color: #000;
+        padding: 1rem;
+        width: 10rem;
+    }
+
+    .arrow-events {
+        width: 8rem;
+    }
+
+    .buttons-scroll {
+        display: flex;
+        justify-content: right;
+        margin-right: 2rem;
+        margin-top: 20rem;
+    }
+
+    .event-box{
+        cursor: pointer;
+    }
+
+    .eight-events a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    .card-front-search {
+        position: relative;
+        border: 1px solid white;
+        background-color: #000;
+        padding: 2rem;
+        margin-top: -2.5rem;
+        margin-right: 3.5rem;
+        box-shadow: 0rem 0rem 0rem 0rem #e83c3c;
+    }
+
+    .title-result {
+        font-weight: 700;
+        font-size: 1.6rem;
+
+    }
+
+    .place-search,
+    .hour-search {
+        font-weight: 400;
+    }
+
+    .jump_card {
+        position: fixed;
+    }
+
+    .place-search{
+      color: #000;
+        background-color: #e83c3c;
+    }
+
+    .card-front-search {
+        position: relative;
+        top: 0rem;
+        left: 0rem;
+        width: 27rem;
+        transition: 0.3s;
+    }
 
 /*footer*/
 .first-footer{
@@ -808,9 +942,6 @@ svg[id^=arrow-animation] {
     margin-top: 2.5rem;
 }
 
-#event li:nth-child(odd) {
-    margin-top: 2.5rem;
-}
 
 .event-box {
   width: 15.62rem;
@@ -839,43 +970,6 @@ svg[id^=arrow-animation] {
   border-radius: .312rem;
 }
 
-.event-card {
-  position: relative;
-  margin-bottom: 5.68rem;
-  color: hsl(0, 0%, 100%);
-}
-
-.event-date {
-  position: relative;
-  text-transform: uppercase;
-  border: .06rem solid hsl(0, 0%, 100%);
-}
-
-.event-date p {
-  position: absolute;
-  background-color: hsl(0, 0%, 0%);
-  margin: .62rem;
-  padding: .31rem .62rem;
-}
-
-.event-img {
-  aspect-ratio: 2/1;
-  object-fit: cover;
-}
-
-.event-img img {
-  width: 100%;
-}
-
-.event-info {
-  position: absolute;
-  bottom: -5.62rem;
-  background-color: hsl(0, 0%, 0%);
-  border: .06rem solid hsl(0, 0%, 100%);
-  padding: 1.25rem;
-  width: 90%;
-  transition: 0.1s ease-in;
-}
 
 @media (min-width: 48rem) {
   .event-info {
@@ -883,7 +977,6 @@ svg[id^=arrow-animation] {
     width: auto;
   }
   .items-category{
-    display: flex;
     gap: 1rem;
     flex-wrap: wrap;
   }
@@ -891,29 +984,6 @@ svg[id^=arrow-animation] {
     font-size: 2rem;
     text-align: center;
   }
-}
-
-a :hover .event-info {
-  box-shadow: -1rem 1rem 0rem 0rem hsl(0, 79%, 57%);
-  margin: 0rem 0rem 1.56rem 1.56rem;
-}
-
-.event-title {
-  font-weight: 500;
-  margin-bottom: 1.25rem;
-}
-
-.event-location {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.event-location span{
-  background-color: hsl(0, 79%, 57%);
-  color: hsl(0, 0%, 0%);
-  padding: .31rem .62rem;
-  margin-right: .62rem;
 }
 
 /* news */ 
