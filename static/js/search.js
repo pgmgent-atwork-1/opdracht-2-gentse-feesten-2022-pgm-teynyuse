@@ -88,7 +88,7 @@
 
         pictureEvent(events) {
             if (events.image === null) {
-                return `<img src="static/img/no-photo.jpg">`
+                return `<img src="../static/img/no-photo.jpg">`
             } else {
                 return `<img src="${events.image.full}" alt="${events.title}">`
             }

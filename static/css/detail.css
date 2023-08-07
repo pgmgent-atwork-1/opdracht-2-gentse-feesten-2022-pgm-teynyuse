@@ -138,3 +138,59 @@
     font-size: 8rem;
     font-weight: 700;
 }
+
+.underbar{
+    margin-top: 5rem;
+    display: flex;
+}
+
+.col-red{
+    width: 40%;
+    background-color: hsl(0, 79%, 57%);
+    padding: 2rem;
+}
+
+.col-red a{
+    color: black;
+}
+
+.place-event p{
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+}
+
+.link-place{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.down-pdf a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid black;
+    font-weight: 500;
+    padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+    width: 20rem;
+    transition: 0.2s all;
+}
+
+.down-pdf a:hover{
+    background-color: white;
+}
+
+.down-pdf svg{
+    width: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.gmap{
+    width: 70%;
+}
