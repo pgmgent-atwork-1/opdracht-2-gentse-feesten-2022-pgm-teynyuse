@@ -65,12 +65,12 @@
             const items = await filterEvents(search);
             const searchItem = items.map((obj) => {
                 return `
-                                        <a href="/events/detail.html?slug=${obj.slug}&day=${obj.day}" class="event-card">
+                                        <a href="../events/detail.html?slug=${obj.slug}&day=${obj.day}" class="event-card">
                                 <li class ="event-box list--type">
                             <div class="image-search">
                             <p class= "date-search">${obj.day_of_week} ${obj.day}</p>
                             <p class= "date-hour">${obj.day_of_week} ${obj.day} &nbsp;${obj.start}u.</p>
-                            <img class="image-search-none" src="${obj.image ? obj.image.thumb : "../static/img/no-photo.jpg"}" alt="">
+                            <img class="image-search-none" src="../${obj.image ? obj.image.thumb : "/static/img/no-photo.jpg"}" alt="">
                             </div>
                             <div class = "jump_card"></div>
                                 <div class="card-front-search">
