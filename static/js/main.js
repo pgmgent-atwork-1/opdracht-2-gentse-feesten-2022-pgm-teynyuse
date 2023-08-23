@@ -42,7 +42,7 @@ const news_URL = 'https://www.pgm.gent/data/gentsefeesten/news.json';
             const random = Math.floor(Math.random()*(events.length-8));
             return events.slice(random,random+8).map((obj) => {
                 return `
-                    <a href="../events/detail.html?slug=${obj.slug}&day=${obj.day}" class="event-card">
+                    <a href="/events/detail.html?slug=${obj.slug}&day=${obj.day}" class="event-card">
                                 <li class ="event-box list--type">
                             <div class="image-search">
                             <p class= "date-search">${obj.day_of_week} ${obj.day}</p>
